@@ -1,191 +1,223 @@
 /*-- -------------------------- -->
-<---    Featured Service 1      -->
+<---   Side By Side Reverse     -->
 <--- -------------------------- -*/
 
-/* Mobile - 360px */
+/* Mobile */
 @media only screen and (min-width: 0rem) {
-    #sbs-867 {
+    #sbsr-2374 {
         padding: var(--sectionPadding);
+        background-color: var(--sectionColor);
+        box-sizing: border-box;
 
         .cs-container {
             width: 100%;
-            /* changes to 1280px at desktop */
-            max-width: (550/16rem);
+            max-width: (1280/16rem);
             margin: auto;
+            /* 32px - 100px top & bottom */
+            /* 16px - 32px left & right */
+            padding: clamp(2rem, 8vw, 6.25rem) clamp(1rem, 3vw, 4rem);
+            background-color: #fff;
+            border-radius: (16/16rem);
             display: flex;
             flex-direction: column;
+            justify-content: center;
             align-items: center;
-            /* 48px - 64px */
-            gap: clamp(3rem, 7vw, 4rem);
+            /* 40px - 48px */
+            gap: clamp(2.5rem, 5vw, 3rem);
         }
 
         .cs-content {
-            /* set text aling to left if content needs to be left aligned */
-            text-align: left;
+            /* set text align to left if content needs to be left aligned */
+            text-align: center;
             width: 100%;
-            max-width: (542/16rem);
-            /* prevents padding from affecting width and height */
-            box-sizing: border-box;
             display: flex;
             flex-direction: column;
             /* centers content horizontally, set to flex-start to left align */
-            align-items: flex-start;
-        }
-
-        .cs-title {
-            /* 17 characters wide including spaces */
-            max-width: 17ch;
+            align-items: center;
         }
 
         .cs-text {
-            margin-bottom: (16/16rem);
-            &:last-of-type {
-                margin-bottom: (32/16rem);
+            max-width: (992/16rem);
+        }
+
+        .cs-content2 {
+            .cs-text {
+                margin-bottom: (16/16rem);
+
+                &:last-of-type {
+                    margin-bottom: (32/16rem);
+                }
+            }
+        }
+
+        .cs-flex {
+            width: 100%;
+            /* 24px - 32px top & bottom */
+            /* 16px - 32px left & right */
+            padding: clamp(1.5rem, 4vw, 2rem) clamp(1rem, 3vw, 2rem);
+            box-sizing: border-box;
+            background-color: var(--sectionColor);
+            border-radius: (16/16rem);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* 16px - 32px */
+            gap: clamp(1rem, 4vw, 2rem);
+        }
+
+        .cs-h3 {
+            font-size: (25/16rem);
+            line-height: 1.2em;
+            font-weight: 700;
+            /* 16px - 32px */
+            margin: 0 0 clamp(1rem, 3vw, 2rem);
+            padding-bottom: (32/16rem);
+            border-bottom: 1px solid #D2D8DF;
+            color: var(--headerTextColor);
+        }
+
+        .cs-ul {
+            width: 100%;
+            margin: 0 0 (32/16rem);
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: (12/16rem);
+        }
+
+        .cs-li {
+            font-size: var(--bodyFontSize);
+            list-style: none;
+            line-height: 1.5em;
+            width: 100%;
+            color: var(--bodyTextColor);
+            display: flex;
+            justify-content: flex-start;
+            /* push icon top the top so if the list item goes to two lines the icon stays at the top */
+            align-items: flex-start;
+            gap: (8/16rem);
+        }
+
+        .cs-icon {
+            width: (19/16rem);
+            height: auto;
+            /* adds extra space between the icon and top of parent so it's more centered */
+            margin-top: 3px;
+            display: block;
+            flex: none;
+        }
+
+        .cs-link {
+            font-size: var(--bodyFontSize);
+            text-decoration: none;
+            line-height: 1.5em;
+            font-weight: 700;
+            margin: 0;
+            color: var(--secondary);
+            position: relative;
+            z-index: 1;
+
+            &:before {
+                content: '';
+                width: 100%;
+                height: 1px;
+                background: currentColor;
+                opacity: 1;
+                display: block;
+                position: absolute;
+                bottom: 0;
+                left: 0;
             }
         }
 
         .cs-picture {
-            display: block;
-            position: relative;
             width: 100%;
-            max-width: (630/16rem);
-            /* 400px - 775px */
-            height: clamp(25rem, 70vw, 48.4375rem);
+            height: 75vw;
+            max-height: (350/16rem);
+            border-radius: (16/16rem);
+            /* clips the border radius of the image */
             overflow: hidden;
+            display: block;
+            order: -1;
+            position: relative;
+            z-index: 1;
 
             img {
+                width: 100%;
+                height: 100%;
+                display: block;
                 position: absolute;
                 top: 0;
                 left: 0;
-                height: 100%;
-                width: 100%;
                 object-fit: cover;
             }
-        }
+        } 
     }
 }
 
 /* Tablet - 768px */
-@media only screen and (min-width: 64rem) {
-    #sbs-867 {
-        padding: var(--sectionPadding);
-
-        .cs-container {
+@media only screen and (min-width: 48rem) {
+    #sbsr-2374 {
+        .cs-flex {
             flex-direction: row;
-            max-width: (1280/16rem);
-            justify-content: space-between;
+            align-items: stretch;
         }
 
-        .cs-content {
-            width: 53%;
-            /* reset the padding, add the section padding back to the section container */
-            padding: 0;
+        .cs-h3 {
+            /* 108px - 142px */
+            min-height: clamp(6.75rem, 12vw, 8.875rem);
         }
 
         .cs-picture {
-            width: 47vw;
-            position: relative;
+            width: 70vw;
+            max-width: (528/16rem);
+            height: auto;
+            max-height: 100%;
+            order: 2;
         }
     }
 }
 
 /* Dark Mode */
-@media only screen and (min-width: 0rem) {
+@media only screen and (min-width: 0em) {
     body.dark-mode {
-        #sbs-867 {
-            .cs-topper {
-                color: var(--primaryLight);
+        #sbsr-2374 {
+            background-color: rgba(0, 0, 0, .2);
+
+            .cs-container {
+                background-color: rgba(0, 0, 0, .3);
             }
 
-            .cs-title,
-            .cs-text {
-                color: var(--bodyTextColorWhite);
-            }
+            .cs-flex {
+                background-color: var(--dark);
+                overflow: hidden;
+                position: relative;
+                z-index: 1;
 
-            .cs-text {
-                opacity: 0.8;
-            }
-
-            .cs-picture {
                 &:before {
-                    background-color: var(--accent);
+                    content: '';
+                    width: 100%;
+                    height: 100%;
+                    background: #000;
+                    opacity: .2;
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
                 }
             }
+
+            .cs-h3 {
+                border-color: rgba(255, 255, 255, .2);
+            }
+
+            .cs-h3, .cs-li {
+                color: var(--bodyTextColorWhite);
+            }
         }
     }
 }
-
-/* Mobile - 360px */
-/* you can copy and paste these styles into the section CSS where you placed the #list-827 HTML, or you can place it in your global stylesheet so you can reuse the HTML in any Side By Side section on your site. That way when you make changes to it, it will also change everywhere in the site */
-#quote-827 {
-    width: 100%;
-    max-width: (630/16rem);
-    margin: 0 0 (32/16rem) 0;
-    /* 16px - 32px */
-    padding: clamp(1rem, 3vw, 2rem);
-    background-color: #f7f7f7;
-    border-radius: (16/16rem);
-    position: relative;
-
-    .cs-quote-text {
-        /* 14px - 16px */
-        font-size: clamp(0.875rem, 1.5vw, 1rem);
-        line-height: 1.5em;
-        width: 100%;
-        max-width: (500/16rem);
-        margin: 0 0 (16/16rem);
-        color: #767676;
-        display: block;
-    }
-
-    .cs-name {
-        font-size: (16/16rem);
-        line-height: 1.2em;
-        text-transform: uppercase;
-        font-weight: bold;
-        width: 100%;
-        margin: 0 0 (4/16rem);
-        color: var(--headerColor);
-        display: block;
-    }
-
-    .cs-job {
-        font-size: (14/16rem);
-        line-height: 1.5em;
-        color: #767676;
-        display: block;
-    }
-
-    .cs-quote-icon {
-        /* 60px - 136px */
-        width: clamp(3.75rem, 10vw, 8.5rem);
-        height: auto;
-        position: absolute;
-        bottom: 0;
-        /* 16px - 32px */
-        right: clamp(1rem, 4vw, 2rem);
-    }
-}
-
-/* Dark Mode, copy and paste only the styles inside the #list-827 brackets into your section's dark mode media query */
-body.dark-mode {
-    #quote-827 {
-        background-color: var(--accent);
-
-        .cs-quote-text,
-        .cs-name {
-            color: var(--bodyTextColorWhite);
-        }
-
-        .cs-job {
-            color: var(--bodyTextColorWhite);
-            opacity: 0.8;
-        }
-
-        .cs-quote-icon {
-            opacity: 0.2;
-        }
-    }
-}
+                                
 
                                 
