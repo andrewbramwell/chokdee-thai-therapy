@@ -20,5 +20,5 @@ module.exports = {
         "googleReview": "https://g.page/r/Carswx-vZttxEBM/review",
     },
     //! Make sure you include the file protocol (e.g. https://) and that NO TRAILING SLASH is included
-    "domain": "https://www.example.com"
+    "domain": "https://www.chokdeethaitherapy.co.uk"
 };
