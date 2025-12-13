@@ -15,10 +15,59 @@ module.exports = {
         "mapLink": "https://maps.app.goo.gl/866FWxeEERejDbR8A"
     },
     "socials": {
-        "facebook": "https://www.facebook.com/",
-        "instagram": "https://www.instagram.com/",
+        "facebook": "",
+        "instagram": "",
         "googleReview": "https://g.page/r/Carswx-vZttxEBM/review",
     },
     //! Make sure you include the file protocol (e.g. https://) and that NO TRAILING SLASH is included
-    "domain": "https://www.chokdeethaitherapy.co.uk"
+    "domain": "https://www.chokdeethaitherapy.co.uk",
+    "schema": {
+        "business": {
+            "@context": "https://schema.org",
+            "@type": "HealthAndBeautyBusiness",
+            "@id": "https://www.chokdeethaitherapy.co.uk/#business",
+            "name": "Chokdee Thai Therapy",
+            "image": "https://www.chokdeethaitherapy.co.uk/assets/svgs/logo-pink2.svg",
+            "url": "https://www.chokdeethaitherapy.co.uk",
+            "telephone": "+447958229813",
+            "email": "chokdeethaitherapy@gmail.com",
+            "priceRange": "££",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "77 Queen St",
+                "addressLocality": "Normanton",
+                "addressRegion": "West Yorkshire",
+                "postalCode": "WF6 1AF",
+                "addressCountry": "GB"
+            },
+            "geo": {
+                "@type": "GeoCoordinates",
+                "url": "https://maps.app.goo.gl/866FWxeEERejDbR8A"
+            },
+            "openingHoursSpecification": [
+                {
+                    "@type": "OpeningHoursSpecification",
+                    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                    "opens": "10:00",
+                    "closes": "19:00"
+                },
+                {
+                    "@type": "OpeningHoursSpecification",
+                    "dayOfWeek": "Saturday",
+                    "opens": "15:30",
+                    "closes": "19:00"
+                }
+            ]
+        },
+        "website": {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "@id": "https://www.chokdeethaitherapy.co.uk/#website",
+            "url": "https://www.chokdeethaitherapy.co.uk",
+            "name": "Chokdee Thai Therapy",
+            "publisher": {
+                "@id": "https://www.chokdeethaitherapy.co.uk/#business"
+            }
+        }
+    }
 };
