@@ -27,7 +27,7 @@ module.exports = {
             "@type": "HealthAndBeautyBusiness",
             "@id": "https://www.chokdeethaitherapy.co.uk/#business",
             "name": "Chokdee Thai Therapy",
-            "image": "https://www.chokdeethaitherapy.co.uk/assets/svgs/logo-pink2.svg",
+            "image": "https://www.chokdeethaitherapy.co.uk/assets/svgs/logo.svg",
             "url": "https://www.chokdeethaitherapy.co.uk",
             "telephone": "+447958229813",
             "email": "chokdeethaitherapy@gmail.com",
